@@ -1,11 +1,11 @@
-const { SID, TOKEN, M_NUMBER } = require('../config').twilio_auth;
+const { SID, TOKEN, FROM_NUMBER, TO_NUMBER } = require('../config').twilio;
 
 const client = require('twilio')(SID, TOKEN);
 
 const notifier = {
     sms: () => {
         client.messages
-            .create({ from: '+12024105093', body: 'Check-in OPEN !!', to: M_NUMBER })
+            .create({ from: FROM_NUMBER, body: 'Check-in OPEN !!', to: TO_NUMBER })
             .then(message => console.log("SMS SENT", message.sid));
     }
 }

@@ -4,10 +4,11 @@ const config = {
         email: 'justgink@gmail.com',
         password: 'Itsme;1337;Ginkoe'
     },
-    twilio_auth: {
+    twilio: {
         SID: 'AC3896f47d027f0e8cc19fd5274975ba51',
         TOKEN: '64e2ceecceda24e2eb9a997356c7f622',
-        M_NUMBER: '+212660382790'
+        FROM_NUMBER: '+12024105093',
+        TO_NUMBER: '+212660382790',
     },
     hints: {
         closed_message: "De nouveaux creneaux ouvriront prochainement",
@@ -21,4 +22,4 @@ const config = {
     }
 };
 
-module.exports = config;
+module.exports = config; 
