@@ -8,15 +8,17 @@ const notifier = {
             .create({ from: FROM_NUMBER, body: 'Check-in OPEN !!', to: TO_NUMBER })
             .then(message => console.log("SMS SENT", message.sid));
     },
-    call: async () => {
+    call: () => {
         //== WIP ==
         client.calls
             .create({
                 url: 'http://demo.twilio.com/docs/voice.xml',
+                method: 'GET',
                 to: TO_NUMBER,
                 from: FROM_NUMBER
             })
-            .then(call => console.log(call.sid));
+            .then(call => console.log(call.sid))
+            .done();
     }
 }
 
