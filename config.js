@@ -22,6 +22,20 @@ const config = {
     },
     cron: {
         schedule: '*/30 * * * *'
+    },
+    winston: {
+        levels: {
+            foo: 0,
+            bar: 1,
+            baz: 2,
+            foobar: 3
+        },
+        colors: {
+            foo: 'blue',
+            bar: 'green',
+            baz: 'yellow',
+            foobar: 'red'
+        }
     }
 };
 

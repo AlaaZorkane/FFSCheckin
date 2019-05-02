@@ -7,46 +7,43 @@ const notifier = require('./notifier/mobile');
 const puppeteer = require('puppeteer');
 const fs = require('fs').promises;
 
-const Executer = async () => {
+const Executer = async (logger, entry) => {
+    logger.info(`Executing the Check-in process ~`);
+    logger.verbose('Setting up the browser');
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const override = Object.assign(page.viewport(), resolution);
     await page.setViewport(override);
     
-    await page.goto(config.weburl);
-    
-    await screenshot.take(page, 'login');
-    //console.log("[+] Taking a screenshot");
-    //await page.screenshot({path: 'screenshots/login_page.png'});
-
-    console.log("[+] Surfing to the page", config.weburl);
+    logger.verbose(`Navigate to the Login page : ${config.weburl}`);
     await page.goto(config.weburl, {
         waitUntil: 'load'
     });
-
-    // TODO : Implement in a function later
-    console.log("[+] Page loaded", page.url());
+    logger.verbose(`Reached : ${page.url()}`)
+    await screenshot.take(page, 'login', entry.screen, logger);
 
     // Logging in
 
-    console.log("[+] Logging in using", email);
+    logger.verbose(`Entering creditentials ~`);
+    logger.verbose(`Connecting with email : ${email}`);
     await page.type('#user_email', email);
+    logger.verbose(`Connecting with password : ****`);
     await page.type('#user_password', password);
+    logger.verbose(`Clicking on the login button`);
     await page.click('.form-actions .btn');
     await page.waitForNavigation();
-    console.log("[+] Logged in successfully ~", page.url());
+    logger.verbose(`Reached : ${page.url()}`)
+    
+    await screenshot.take(page, 'checkin', entry.screen, logger);
 
-    // Taking a screenshot of the check-in page for captcha verification
-    await screenshot.take(page, 'checkin');
-
-    // Pulling the DOM
+    logger.verbose('Pulling the DOM ~');
     let bodyHTML = await page.evaluate(() => document.body.innerHTML);
 
-    // Checking if Check-ins are open or not
+    logger.verbose('Testing if check-ins are open');
     if (bodyHTML.includes(config.hints.closed_message)) {
-        console.log("\nCheck-ins are closed");
+        logger.silly('Check-ins are closed')
     } else {
-        console.log("\nCheck-ins are open !!!!");
+        logger.silly('Check-ins ARE OPEN !!')
         //== SEND SMS IN CASE==//
         notifier.sms();
         //== Auto check-in ==//
