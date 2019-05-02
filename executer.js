@@ -48,7 +48,7 @@ const Executer = async () => {
     } else {
         console.log("\nCheck-ins are open !!!!");
         //== SEND SMS IN CASE==//
-        notifier.call();
+        notifier.sms();
         //== Auto check-in ==//
         await page.click('.btn .btn-primary .js-meeting-0');
         await page.waitForNavigation();
