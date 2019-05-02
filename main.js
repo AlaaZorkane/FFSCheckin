@@ -10,7 +10,7 @@ const notifier = require('./notifier/mobile');
 
 // Alarm if the program crashes
 process.on('exit', (code) => {
-    if(entry.watch) notifier.sms('The program is existing for some reason');
+    if(entry.watch) notifier.sms('The program is exiting for some reason');
     console.log(`About to exit with code: ${code}`);
 });
 
