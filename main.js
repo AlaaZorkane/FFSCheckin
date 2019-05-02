@@ -5,7 +5,7 @@ const _arg = process.argv[2];
 
 switch (_arg) {
     case "loop":
-        new CronJob('* * * * * *', () => {
+        new CronJob('*/30 * * * *', () => {
             console.log("[O][O] Executing again ~ !");
             Executer();
         }, null, true, 'America/Los_Angeles');

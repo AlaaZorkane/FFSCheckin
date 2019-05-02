@@ -41,8 +41,6 @@ const Executer = async () => {
 
     // Pulling the DOM
     let bodyHTML = await page.evaluate(() => document.body.innerHTML);
-    console.log("[+] Saving HTML to page")
-    await fs.writeFile('test.html', bodyHTML);
 
     // Checking if Check-ins are open or not
     if (bodyHTML.includes(config.hints.closed_message)) {
