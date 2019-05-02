@@ -1,19 +1,27 @@
+#!/usr/bin/env node
+const config = require('./config');
+
+const arg_parser = require('./cli');
 const Executer = require('./executer');
 const CronJob = require('cron').CronJob;
+const entry = arg_parser(process.argv);
 
-const _arg = process.argv[2];
+const notifier = require('./notifier/mobile');
 
-switch (_arg) {
-    case "loop":
-        new CronJob('*/30 * * * *', () => {
-            console.log("[O][O] Executing again ~ !");
-            Executer();
-        }, null, true, 'America/Los_Angeles');
-        break;
+// Alarm if the program crashes
+process.on('exit', (code) => {
+    if(entry.watch) notifier.sms('The program is existing for some reason');
+    console.log(`About to exit with code: ${code}`);
+});
 
-    default:
+if (entry.loop) {
+    let _schedule = entry.cron ? entry.cron : config.cron.schedule;
+    new CronJob(_schedule, () => {
+        console.log("[O][O] Executing again ~ !");
         Executer();
-        break;
+    }, null, true, 'America/Los_Angeles');
+} else {
+    Executer();
 }
 
 //== Time Zone ain't a big deal ~

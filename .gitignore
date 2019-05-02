@@ -4,6 +4,5 @@ npm-debug.log
 .env
 .DS_Store
 .todo
-
-*.png
 *.html
+*.png

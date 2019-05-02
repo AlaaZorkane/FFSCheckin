@@ -19,6 +19,9 @@ const config = {
             width: 1366,
             height: 1000
         }
+    },
+    cron: {
+        schedule: '*/30 * * * *'
     }
 };
 
