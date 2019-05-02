@@ -3,10 +3,14 @@ const { SID, TOKEN, FROM_NUMBER, TO_NUMBER } = require('../config').twilio;
 const client = require('twilio')(SID, TOKEN);
 
 const notifier = {
-    sms: (desc) => {
+    sms: (desc, alert) => {
         client.messages
-            .create({ from: FROM_NUMBER, body: desc ? desc : "Notified for some reason :shrug:", to: TO_NUMBER })
-            .then(message => console.log("SMS SENT", message.sid));
+            .create({ from: FROM_NUMBER, body: desc ? desc : "SOMETHING IS GOING ON !", to: TO_NUMBER })
+            .then(message => {
+                console.log("SMS SENT", message.sid);
+                if (alert) process.exit();
+            })
+            .done();
     },
     call: () => {
         //== WIP ==
