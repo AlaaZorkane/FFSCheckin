@@ -23,6 +23,7 @@ const config = {
     cron: {
         schedule: '*/30 * * * *'
     },
+    // WIP
     winston: {
         levels: {
             foo: 0,
