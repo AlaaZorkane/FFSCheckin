@@ -1,5 +1,5 @@
 const config = require('./config');
-const {email, password} = config.web_auth;
+const { email, password } = config.web_auth;
 const resolution = config.browser.resolution;
 const screenshot = require('./screenshots');
 const notifier = require('./notifier/mobile');
@@ -14,7 +14,7 @@ const Executer = async (logger, entry) => {
     const page = await browser.newPage();
     const override = Object.assign(page.viewport(), resolution);
     await page.setViewport(override);
-    
+
     logger.verbose(`Navigate to the Login page : ${config.weburl}`);
     await page.goto(config.weburl, {
         waitUntil: 'load'
@@ -33,27 +33,45 @@ const Executer = async (logger, entry) => {
     await page.click('.form-actions .btn');
     await page.waitForNavigation();
     logger.verbose(`Reached : ${page.url()}`)
-    
+
     await screenshot.take(page, 'checkin', entry.screen, logger);
 
     logger.verbose('Pulling the DOM ~');
     let bodyHTML = await page.evaluate(() => document.body.innerHTML);
 
     logger.verbose('Testing if check-ins are open');
-    if (bodyHTML.includes(config.hints.closed_message)) {
-        logger.silly('Check-ins are closed')
+
+    if (false) {
+        logger.warn('Check-ins are closed')
     } else {
-        logger.silly('Check-ins ARE OPEN !!')
+        logger.warn('Check-ins ARE OPEN !!')
+        logger.verbose('Notify with chosen option');
         //== SEND SMS IN CASE==//
-        notifier.sms();
+        switch (entry.notifier) {
+            case "sms":
+                notifier.sms('CHECK INS ARE OPEN !')
+                break;
+            // Default Call
+            default:
+                notifier.call()
+                break;
+        };
+
         //== Auto check-in ==//
-        await page.click('.btn .btn-primary .js-meeting-0');
+        logger.verbose('Auto-Check in');
+        await page.click('.btn .btn-primary .js-meeting-0')
+            .catch(err => { if (err) notifier.sms('Failed to auto-checkin RUN AND CHECK IN URSELF', true) })
         await page.waitForNavigation();
+
+        logger.info('Exiting lets hope we got the check-in :c ');
+        process.exit();
     }
 
     //[(#tests)]//
-    const hrefs = await page.$$eval('a', as => as.map(a => a.href));
-    console.log(hrefs);
+    if (entry.debug) {
+        const hrefs = await page.$$eval('a', as => as.map(a => a.href));
+        console.log(hrefs);
+    }
 
     await browser.close();
 };

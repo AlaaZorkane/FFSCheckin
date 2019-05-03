@@ -8,6 +8,8 @@ module.exports = (args) => {
     .option('-s --screen', 'Take screenshots for future debugging')
     .option('-c --cron [scheduler]', 'Use custom cronjob schedule')
     .option('-w --watch', 'Notify with an SMS if the program is exiting')
+    .option('-n --notifier [type]', 'Using either SMS(sms) or CALL(call)')
+    .option('-d --debug', 'Activate test scopes')
     .parse(args);
     
     return parser
