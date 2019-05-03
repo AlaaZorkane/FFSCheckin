@@ -7,7 +7,16 @@ const notifier = require('./notifier/mobile');
 const puppeteer = require('puppeteer');
 const fs = require('fs').promises;
 
+
+
 const Executer = async (logger, entry) => {
+    logger.verbose('Loading Selectors');
+    const $username = entry.user ? entry.user : config.hints.selectors.$username;
+    const $password = entry.password ? entry.password : config.hints.selectors.$password;
+    const $login_button = entry.login ? entry.login : config.hints.selectors.$login_button;
+    const $checkin_button = entry.checkin ? entry.checkin : config.hints.selectors.$checkin_button;
+    logger.verbose($username, $password, $login_button, $checkin_button);
+
     logger.info(`Executing the Check-in process ~`);
     logger.verbose('Setting up the browser');
     const browser = await puppeteer.launch();
@@ -26,11 +35,11 @@ const Executer = async (logger, entry) => {
 
     logger.verbose(`Entering creditentials ~`);
     logger.verbose(`Connecting with email : ${email}`);
-    await page.type('#user_email', email);
+    await page.type($username, email);
     logger.verbose(`Connecting with password : ****`);
-    await page.type('#user_password', password);
+    await page.type($password, password);
     logger.verbose(`Clicking on the login button`);
-    await page.click('.form-actions .btn');
+    await page.click($login_button);
     await page.waitForNavigation();
     logger.verbose(`Reached : ${page.url()}`)
     
@@ -59,7 +68,7 @@ const Executer = async (logger, entry) => {
 
         //== Auto check-in ==//
         logger.verbose('Auto-Check in');
-        await page.click('.btn.btn-primary.js-meeting-0')
+        await page.click($checkin_button)
             .catch(err => { if (err) notifier.sms('Failed to auto-checkin RUN AND CHECK IN URSELF', true) })
         await page.waitForNavigation();
         await screenshot.take(page, 'aftercheckin', entry.screen, logger);

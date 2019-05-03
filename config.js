@@ -12,7 +12,13 @@ const config = {
     },
     hints: {
         closed_message: "De nouveaux creneaux ouvriront prochainement",
-        opened_message: "OPTIONAL"
+        opened_message: "OPTIONAL",
+        selectors: {
+            $username: '#user_email',
+            $password: '#user_password',
+            $login_button: '.form-actions .btn',
+            $checkin_button: ''
+        }
     },
     browser: {
         resolution: {
@@ -26,16 +32,20 @@ const config = {
     // WIP
     winston: {
         levels: {
-            foo: 0,
-            bar: 1,
-            baz: 2,
-            foobar: 3
+            error: 0,
+            warn: 1,
+            info: 2,
+            verbose: 3,
+            debug: 4,
+            silly: 5
         },
         colors: {
-            foo: 'blue',
-            bar: 'green',
-            baz: 'yellow',
-            foobar: 'red'
+            silly: 'magenta',
+            verbose: 'cyan',
+            debug: 'blue',
+            error: 'red',
+            warn: 'yellow',
+            info: 'green'
         }
     }
 };

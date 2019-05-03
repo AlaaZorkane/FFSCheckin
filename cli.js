@@ -10,7 +10,13 @@ module.exports = (args) => {
     .option('-w --watch', 'Notify with an SMS if the program is exiting')
     .option('-n --notifier [type]', 'Using either SMS(sms) or CALL(call)')
     .option('-d --debug', 'Activate test scopes')
+
+    .option('-u --user [selector]', 'Username selector')
+    .option('-p --password [selector]', 'Password selector')
+    .option('-L --login [selector]', 'Login selector')
+    .option('-C --checkin [selector]', 'Check-in Selector')
     .parse(args);
     
+    process.env.entry = parser;
     return parser
 }

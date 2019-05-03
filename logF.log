@@ -1,0 +1,128 @@
+ [[32minfo[39m]: Entering loop mode with cron schedule : */2 * * * * [90m2019-05-03 11:41:26[39m
+ [[36mverbose[39m]: Loading Selectors [90m2019-05-03 11:42:00[39m
+ [[36mverbose[39m]: #user_email [90m2019-05-03 11:42:00[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:42:00[39m
+ [[36mverbose[39m]: Setting up the browser [90m2019-05-03 11:42:00[39m
+ [[36mverbose[39m]: Navigate to the Login page : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:42:00[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:42:01[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mlogin[39m [90m2019-05-03 11:42:01[39m
+ [[36mverbose[39m]: Entering creditentials ~ [90m2019-05-03 11:42:01[39m
+ [[36mverbose[39m]: Connecting with email : justgink@gmail.com [90m2019-05-03 11:42:01[39m
+ [[36mverbose[39m]: Connecting with password : **** [90m2019-05-03 11:42:01[39m
+ [[36mverbose[39m]: Clicking on the login button [90m2019-05-03 11:42:01[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/meetings [90m2019-05-03 11:42:02[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mcheckin[39m [90m2019-05-03 11:42:02[39m
+ [[36mverbose[39m]: Pulling the DOM ~ [90m2019-05-03 11:42:02[39m
+ [[36mverbose[39m]: Testing if check-ins are open [90m2019-05-03 11:42:02[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:42:02[39m
+ [[36mverbose[39m]: Loading Selectors [90m2019-05-03 11:44:00[39m
+ [[36mverbose[39m]: #user_email [90m2019-05-03 11:44:00[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:44:00[39m
+ [[36mverbose[39m]: Setting up the browser [90m2019-05-03 11:44:00[39m
+ [[36mverbose[39m]: Navigate to the Login page : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:44:00[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:44:01[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mlogin[39m [90m2019-05-03 11:44:01[39m
+ [[36mverbose[39m]: Entering creditentials ~ [90m2019-05-03 11:44:01[39m
+ [[36mverbose[39m]: Connecting with email : justgink@gmail.com [90m2019-05-03 11:44:01[39m
+ [[36mverbose[39m]: Connecting with password : **** [90m2019-05-03 11:44:01[39m
+ [[36mverbose[39m]: Clicking on the login button [90m2019-05-03 11:44:01[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/meetings [90m2019-05-03 11:44:02[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mcheckin[39m [90m2019-05-03 11:44:02[39m
+ [[36mverbose[39m]: Pulling the DOM ~ [90m2019-05-03 11:44:03[39m
+ [[36mverbose[39m]: Testing if check-ins are open [90m2019-05-03 11:44:03[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:44:03[39m
+ [[36mverbose[39m]: Loading Selectors [90m2019-05-03 11:46:00[39m
+ [[36mverbose[39m]: #user_email [90m2019-05-03 11:46:00[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:46:00[39m
+ [[36mverbose[39m]: Setting up the browser [90m2019-05-03 11:46:00[39m
+ [[36mverbose[39m]: Navigate to the Login page : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:46:00[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:46:01[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mlogin[39m [90m2019-05-03 11:46:01[39m
+ [[36mverbose[39m]: Entering creditentials ~ [90m2019-05-03 11:46:01[39m
+ [[36mverbose[39m]: Connecting with email : justgink@gmail.com [90m2019-05-03 11:46:01[39m
+ [[36mverbose[39m]: Connecting with password : **** [90m2019-05-03 11:46:01[39m
+ [[36mverbose[39m]: Clicking on the login button [90m2019-05-03 11:46:01[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/meetings [90m2019-05-03 11:46:02[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mcheckin[39m [90m2019-05-03 11:46:02[39m
+ [[36mverbose[39m]: Pulling the DOM ~ [90m2019-05-03 11:46:02[39m
+ [[36mverbose[39m]: Testing if check-ins are open [90m2019-05-03 11:46:02[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:46:02[39m
+ [[36mverbose[39m]: Loading Selectors [90m2019-05-03 11:48:00[39m
+ [[36mverbose[39m]: #user_email [90m2019-05-03 11:48:00[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:48:00[39m
+ [[36mverbose[39m]: Setting up the browser [90m2019-05-03 11:48:00[39m
+ [[36mverbose[39m]: Navigate to the Login page : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:48:00[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:48:01[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mlogin[39m [90m2019-05-03 11:48:01[39m
+ [[36mverbose[39m]: Entering creditentials ~ [90m2019-05-03 11:48:01[39m
+ [[36mverbose[39m]: Connecting with email : justgink@gmail.com [90m2019-05-03 11:48:01[39m
+ [[36mverbose[39m]: Connecting with password : **** [90m2019-05-03 11:48:01[39m
+ [[36mverbose[39m]: Clicking on the login button [90m2019-05-03 11:48:02[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/meetings [90m2019-05-03 11:48:02[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mcheckin[39m [90m2019-05-03 11:48:02[39m
+ [[36mverbose[39m]: Pulling the DOM ~ [90m2019-05-03 11:48:03[39m
+ [[36mverbose[39m]: Testing if check-ins are open [90m2019-05-03 11:48:03[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:48:03[39m
+ [[36mverbose[39m]: Loading Selectors [90m2019-05-03 11:50:00[39m
+ [[36mverbose[39m]: #user_email [90m2019-05-03 11:50:00[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:50:00[39m
+ [[36mverbose[39m]: Setting up the browser [90m2019-05-03 11:50:00[39m
+ [[36mverbose[39m]: Navigate to the Login page : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:50:00[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:50:01[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mlogin[39m [90m2019-05-03 11:50:01[39m
+ [[36mverbose[39m]: Entering creditentials ~ [90m2019-05-03 11:50:01[39m
+ [[36mverbose[39m]: Connecting with email : justgink@gmail.com [90m2019-05-03 11:50:01[39m
+ [[36mverbose[39m]: Connecting with password : **** [90m2019-05-03 11:50:01[39m
+ [[36mverbose[39m]: Clicking on the login button [90m2019-05-03 11:50:01[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/meetings [90m2019-05-03 11:50:02[39m
+ [[36mverbose[39m]: Taking a screenshot of [32mcheckin[39m [90m2019-05-03 11:50:02[39m
+ [[36mverbose[39m]: Pulling the DOM ~ [90m2019-05-03 11:50:02[39m
+ [[36mverbose[39m]: Testing if check-ins are open [90m2019-05-03 11:50:02[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:50:02[39m
+ [[32minfo[39m]: Entering loop mode with cron schedule : */2 * * * * [90m2019-05-03 11:51:06[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:52:00[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:52:02[39m
+ [[32minfo[39m]: Entering loop mode with cron schedule : */2 * * * * [90m2019-05-03 11:53:20[39m
+ [[32minfo[39m]: Entering single time use mode ~ ! [90m2019-05-03 11:53:28[39m
+ [[36mverbose[39m]: Loading Selectors [90m2019-05-03 11:53:28[39m
+ [[36mverbose[39m]: #user_email [90m2019-05-03 11:53:28[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:53:28[39m
+ [[36mverbose[39m]: Setting up the browser [90m2019-05-03 11:53:28[39m
+ [[36mverbose[39m]: Navigate to the Login page : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:53:29[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:53:30[39m
+ [[36mverbose[39m]: Entering creditentials ~ [90m2019-05-03 11:53:30[39m
+ [[36mverbose[39m]: Connecting with email : justgink@gmail.com [90m2019-05-03 11:53:30[39m
+ [[36mverbose[39m]: Connecting with password : **** [90m2019-05-03 11:53:30[39m
+ [[36mverbose[39m]: Clicking on the login button [90m2019-05-03 11:53:30[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/meetings [90m2019-05-03 11:53:31[39m
+ [[36mverbose[39m]: Pulling the DOM ~ [90m2019-05-03 11:53:31[39m
+ [[36mverbose[39m]: Testing if check-ins are open [90m2019-05-03 11:53:31[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:53:31[39m
+ [[32minfo[39m]: Entering single time use mode ~ ! [90m2019-05-03 11:53:49[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:53:49[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:53:52[39m
+ [[32minfo[39m]: Entering single time use mode ~ ! [90m2019-05-03 11:56:25[39m
+ [[36mverbose[39m]: Loading Selectors [90m2019-05-03 11:56:25[39m
+ [[36mverbose[39m]: #user_email [90m2019-05-03 11:56:25[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:56:25[39m
+ [[36mverbose[39m]: Setting up the browser [90m2019-05-03 11:56:25[39m
+ [[36mverbose[39m]: Navigate to the Login page : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:56:25[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/users/sign_in [90m2019-05-03 11:56:27[39m
+ [[36mverbose[39m]: Entering creditentials ~ [90m2019-05-03 11:56:27[39m
+ [[36mverbose[39m]: Connecting with email : justgink@gmail.com [90m2019-05-03 11:56:27[39m
+ [[36mverbose[39m]: Connecting with password : **** [90m2019-05-03 11:56:27[39m
+ [[36mverbose[39m]: Clicking on the login button [90m2019-05-03 11:56:27[39m
+ [[36mverbose[39m]: Reached : https://candidature.1337.ma/meetings [90m2019-05-03 11:56:27[39m
+ [[36mverbose[39m]: Pulling the DOM ~ [90m2019-05-03 11:56:27[39m
+ [[36mverbose[39m]: Testing if check-ins are open [90m2019-05-03 11:56:27[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:56:27[39m
+ [[32minfo[39m]: Entering single time use mode ~ ! [90m2019-05-03 11:58:08[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:58:08[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:58:10[39m
+ [[32minfo[39m]: Entering single time use mode ~ ! [90m2019-05-03 11:58:13[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:58:13[39m
+ [[33mwarn[39m]: Check-ins are closed [90m2019-05-03 11:58:15[39m
+ [[32minfo[39m]: Entering single time use mode ~ ! [90m2019-05-03 11:58:59[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:58:59[39m
+ [[32minfo[39m]: Entering single time use mode ~ ! [90m2019-05-03 11:59:04[39m
+ [[32minfo[39m]: Executing the Check-in process ~ [90m2019-05-03 11:59:04[39m
