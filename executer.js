@@ -62,6 +62,7 @@ const Executer = async (logger, entry) => {
         await page.click('.btn.btn-primary.js-meeting-0')
             .catch(err => { if (err) notifier.sms('Failed to auto-checkin RUN AND CHECK IN URSELF', true) })
         await page.waitForNavigation();
+        await screenshot.take(page, 'aftercheckin', entry.screen, logger);
 
         logger.info('Exiting lets hope we got the check-in :c ');
         process.exit();
