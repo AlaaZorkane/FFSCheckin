@@ -40,7 +40,7 @@ const Executer = async (logger, entry) => {
     await page.type($password, password);
     logger.verbose(`Clicking on the login button`);
     await page.click($login_button);
-    await page.waitForNavigation();
+    await page.waitForNavigation().catch(e => logger.warn("Dammit boi ~ Ur internet is soo faast, chromium can't keep up with ya"));
 
     logger.verbose(`Reached : ${page.url()}`);
     
