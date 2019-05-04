@@ -24,7 +24,7 @@ const notifier = {
                 console.log(call.sid);
             })
             .catch(e => {
-                console.log("Fuck you, you and your error !");
+                console.log("Fuck you, you and your error ! ~ sumimasen, adam-kun is angry :(");
             })
             .done(() => {
                 console.log("Call done");
