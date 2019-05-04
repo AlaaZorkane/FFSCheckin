@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node main.js -l -w -n \"call\" -c \"*/1 * * * *\" "
+    "start": "node main.js -l -w -n \"call\" -c \"*/1 * * * *\" "
   },
   "keywords": [],
   "author": "",
