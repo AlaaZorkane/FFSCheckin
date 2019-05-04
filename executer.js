@@ -77,7 +77,7 @@ const Executer = async (logger, entry) => {
         await screenshot.take(page, 'aftercheckin', entry.screen, logger);
 
         logger.info('Exiting lets hope we got the check-in :c ');
-        process.exit();
+        process.kill(process.pid);
     }
 
     //[(#tests)]//
