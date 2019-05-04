@@ -40,7 +40,9 @@ const Executer = async (logger, entry) => {
     await page.type($password, password);
     logger.verbose(`Clicking on the login button`);
     await page.click($login_button);
+    await screenshot.take(page, 'after-login-before-wait', entry.screen, logger);
     await page.waitForNavigation();
+    await screenshot.take(page, 'after-login-after-wait', entry.screen, logger);
     logger.verbose(`Reached : ${page.url()}`)
     
     await screenshot.take(page, 'checkin', entry.screen, logger);
