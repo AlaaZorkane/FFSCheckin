@@ -1,5 +1,6 @@
 const config = {
     weburl: 'https://candidature.1337.ma/users/sign_in',
+    //weburl: 'http://35.204.193.179:8080/',
     web_auth: {
         email: 'alaazorkane@gmail.com',
         password: 'B4v9_Uf'

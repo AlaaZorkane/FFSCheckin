@@ -15,6 +15,8 @@ const Executer = async (logger, entry) => {
     const $password = entry.password ? entry.password : config.hints.selectors.$password;
     const $login_button = entry.login ? entry.login : config.hints.selectors.$login_button;
     const $checkin_button = entry.checkin ? entry.checkin : config.hints.selectors.$checkin_button;
+
+    const $weburl = entry.url ? entry.url : config.weburl;
     logger.verbose($username, $password, $login_button, $checkin_button);
 
     logger.info(`Executing the Check-in process ~`);
@@ -24,8 +26,8 @@ const Executer = async (logger, entry) => {
     const override = Object.assign(page.viewport(), resolution);
     await page.setViewport(override);
     
-    logger.verbose(`Navigate to the Login page : ${config.weburl}`);
-    await page.goto(config.weburl, {
+    logger.verbose(`Navigate to the Login page : ${$weburl}`);
+    await page.goto($weburl, {
         waitUntil: 'load'
     });
     logger.verbose(`Reached : ${page.url()}`)
