@@ -73,7 +73,7 @@ const Executer = async (logger, entry) => {
         logger.verbose('Auto-Check in');
         await page.click($checkin_button)
             .catch(err => { if (err) notifier.sms('Failed to auto-checkin RUN AND CHECK IN URSELF', true) })
-        await page.waitForNavigation();
+        await page.waitForNavigation({timeout: 5000}).catch(e => logger.warn("Dammit boi ~ Ur internet is soo faast, chromium can't keep up with ya"));
         await screenshot.take(page, 'aftercheckin', entry.screen, logger);
 
         logger.info('Exiting lets hope we got the check-in :c ');

@@ -10,9 +10,8 @@ const notifier = {
                 console.log("SMS SENT", message.sid);
                 if (alert) process.exit();
             })
-            .done();
     },
-    call: () => {
+    call: (alert) => {
         //== WIP ==
         client.calls
             .create({
@@ -21,8 +20,15 @@ const notifier = {
                 to: TO_NUMBER,
                 from: FROM_NUMBER
             })
-            .then(call => console.log(call.sid))
-            .done();
+            .then(call => {
+                console.log(call.sid);
+            })
+            .catch(e => {
+                console.log("Fuck you, you and your error !");
+            })
+            .done(() => {
+                console.log("Call done");
+            });
     }
 }
 
