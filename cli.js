@@ -15,7 +15,7 @@ module.exports = (args) => {
     .option('-p --password [selector]', 'Password selector')
     .option('-L --login [selector]', 'Login selector')
     .option('-C --checkin [selector]', 'Check-in Selector')
-    .option('-U -url [link]', 'Choosing custom URL')
+    .option('-U --url [link]', 'Choosing custom URL')
     .parse(args);
     
     process.env.entry = parser;
