@@ -19,7 +19,7 @@ const Executer = async (logger, entry) => {
 
     logger.info(`Executing the Check-in process ~`);
     logger.verbose('Setting up the browser');
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless: (entry.debug ? false : true)});
     const page = await browser.newPage();
     const override = Object.assign(page.viewport(), resolution);
     await page.setViewport(override);
@@ -40,10 +40,9 @@ const Executer = async (logger, entry) => {
     await page.type($password, password);
     logger.verbose(`Clicking on the login button`);
     await page.click($login_button);
-    await screenshot.take(page, 'after-login-before-wait', entry.screen, logger);
     await page.waitForNavigation();
-    await screenshot.take(page, 'after-login-after-wait', entry.screen, logger);
-    logger.verbose(`Reached : ${page.url()}`)
+
+    logger.verbose(`Reached : ${page.url()}`);
     
     await screenshot.take(page, 'checkin', entry.screen, logger);
 
