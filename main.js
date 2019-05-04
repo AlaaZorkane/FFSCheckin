@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const config = require('./config');
+require('http').createServer().listen(8080)
 
 const arg_parser = require('./cli');
 const Executer = require('./executer');
