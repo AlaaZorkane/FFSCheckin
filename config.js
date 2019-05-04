@@ -1,23 +1,23 @@
 const config = {
     weburl: 'https://candidature.1337.ma/users/sign_in',
     web_auth: {
-        email: 'justgink@gmail.com',
-        password: 'Itsme;1337;Ginkoe'
+        email: 'alaazorkane@gmail.com',
+        password: 'B4v9_Uf'
     },
     twilio: {
-        SID: 'AC3896f47d027f0e8cc19fd5274975ba51',
-        TOKEN: '64e2ceecceda24e2eb9a997356c7f622',
-        FROM_NUMBER: '+12024105093',
-        TO_NUMBER: '+212660382790',
+        SID: 'AC0cc48282776254db19ff8c4685bee797',
+        TOKEN: 'f5bcf9240560be212d937072daf5df6b',
+        FROM_NUMBER: '+19164680697',
+        TO_NUMBER: '+212694106628',
     },
     hints: {
         closed_message: "De nouveaux creneaux ouvriront prochainement",
         opened_message: "OPTIONAL",
         selectors: {
-            $username: '#user_email',
-            $password: '#user_password',
-            $login_button: '.form-actions .btn',
-            $checkin_button: ''
+            $username: '[name="user[email]"]',
+            $password: '[name="user[password]"]',
+            $login_button: '[name="commit"]',
+            $checkin_button: '.js-meeting-0'
         }
     },
     browser: {
@@ -27,7 +27,7 @@ const config = {
         }
     },
     cron: {
-        schedule: '*/30 * * * *'
+        schedule: '*/2 * * * *'
     },
     // WIP
     winston: {
